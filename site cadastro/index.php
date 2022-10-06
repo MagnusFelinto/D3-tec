@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['msg']="Usuário cadastrado com sucesso"; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +46,8 @@
 <body>
     <div class="bloco" align="center">
         <form class="forms" method="post" action="cad.php">
+            <p><?php echo $_SESSION['msg'];
+            ?></p>
             <h1>Cadastro</h1>
             <label for="text">Nome:</label>
             <input type="text" placeholder="Digite seu nome" class="cadastro" name="nome"> <br>

@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+$_SESSION['msg'] = "Usuário cadastrado com sucesso";
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
