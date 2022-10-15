@@ -6,7 +6,7 @@
     <head>
         <title>Aviso</title>
         <script type="text/javascript">
-            alert("Digite Suas Informações!");
+            alert("Informações Incorretas!");
             window.location.href="logindex.php";
         </script>
     </head>

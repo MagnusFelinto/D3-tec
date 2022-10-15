@@ -19,7 +19,6 @@
             .titulo{
                 color:black;
             }
-
             body,
             .signin {
             background-color: #d3d3d3;
@@ -102,7 +101,7 @@
             outline: 0;
             border: 2px solid rgba(255, 255, 255, 0.5);
             border-radius: 20px;
-            background: green;
+            background-color: green;
             }
 
             .text:focus + span {
@@ -199,22 +198,6 @@
             text-decoration: none;
             color: black;
             }
-
-            .nonactive,
-            a{  
-            text-align: left;
-            display: inline;
-            position: relative;
-            text-decoration: none;
-            color: black;
-            }
-            .pagprin{
-            background-color: Green;
-            font-family: 'Montserrat', sans-serif;
-            color: black;
-            font-size: 14px;
-            letter-spacing: 1px;
-            }
             .signina{
             background-color: green;
             color: #FFF;
@@ -242,11 +225,11 @@
             <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
         <div class="login">
-        <h2 class="nonactive"><a href="logindex.php">Login</a></h2>
+        <h2 class="active"> Login </h2>
 
-        <h2 class="active"><a href="cadastro.php">cadastrar-se<a></h2>
+        <h2 class="nonactive"><a href="cadastro.php">cadastrar-se<a></h2>
         
-        <form method="POST" action="cadastra.php">
+        <form method="POST" action="login.php">
 
             <input type="email" class="text" name="email" id="email" value="">
             <span>email</span>
@@ -259,11 +242,20 @@
             <span>senha</span>
             <br>
             
-            <button class="signin">Fazer cadastro</button>
+            <button class="signin">Fazer Login</button>
         </form>
         <form metho="POST" action="index.php">
                 <button class="signina">Voltar para página principal</button>
-            </form>
+        </form>
+
+        <p style="color:white">
+            <?php
+            if(isset($_SESSION['msg'])){
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+            }
+            ?>
+        </p>
 
         </div>
 

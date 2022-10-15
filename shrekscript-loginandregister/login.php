@@ -4,7 +4,7 @@
 
     if((isset($_POST['email'])) && (isset($_POST['senha']))){
         $email = $_POST['email'];
-        $senha = $_POST['senha'];
+        $senha = md5($_POST['senha']);
    
         $sql = "SELECT * FROM usuarios WHERE email = '$email' && senha = '$senha' LIMIT 1";
         $result = mysqli_query($conn, $sql);
@@ -17,7 +17,7 @@
         }elseif(!empty($resultado)){
 
             $_SESSION['usuarioId'] = $resultado['id'];
-            header("Location: menu.php");
+            header("Location: log.php");
 
         }
     }

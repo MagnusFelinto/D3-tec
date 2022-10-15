@@ -7,7 +7,7 @@
         <title>Aviso</title>
         <script type="text/javascript">
             alert("Email já cadastrado!");
-            window.location.href="index.php";
+            window.location.href="logindex.php";
         </script>
     </head>
     <body>

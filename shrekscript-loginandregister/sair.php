@@ -5,5 +5,5 @@
     unset(
         $_SESSION['usuarioId']
     );
-    header("Location: index.php");
+    header("Location: logindex.php");
 ?>

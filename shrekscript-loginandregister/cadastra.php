@@ -9,7 +9,7 @@
     $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
 
     $email = $_POST['email'];
-    $password = $_POST['senha'];
+    $password = md5($_POST['senha']);
 
     $limita = "SELECT * FROM usuarios WHERE email = '$email'";
 
@@ -25,11 +25,11 @@
     }else{
             
 
-        $result_usuario = "INSERT INTO shrek (email, senha) VALUES ('$email','$password')";
+        $result_usuario = "INSERT INTO usuarios (email, senha) VALUES ('$email','$password')";
 
         $resultado_usuario = mysqli_query($conn,$result_usuario);
 
-        header("location:index.php");
+        header("location:cadi.php");
 
     }
 

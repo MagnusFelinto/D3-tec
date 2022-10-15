@@ -6,8 +6,8 @@
     <head>
         <title>Aviso</title>
         <script type="text/javascript">
-            alert("Digite Suas Informações!");
-            window.location.href="logindex.php";
+            alert("Logado com Sucesso!");
+            window.location.href="menu.php";
         </script>
     </head>
     <body>
