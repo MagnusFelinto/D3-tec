@@ -47,12 +47,12 @@
         </nav>
         <div align="center">
             <div class="caixa">
-                <form action="" method="">
+                <form action="update.php" method="POST">
                 <?php include_once("conexao.php");
-        $sql    = "SELECT * from roteiro";
-        $res    = mysqli_query($conn, $sql);
-        $result = mysqli_fetch_assoc($res);
-    ?>
+                    $sql    = "SELECT * from roteiro";
+                    $res    = mysqli_query($conn, $sql);
+                    $result = mysqli_fetch_assoc($res);
+                ?>
                 <table>
                     <tr> 
                         <th>
@@ -66,7 +66,7 @@
                             </label>
                         </td>
                         <td>
-                            <input type="text" name="titulo" id="titulo" value="<?php echo $result["titulo"]; ?>">
+                            <input type="text" name="titulo0" id="titulo" value="<?php echo $result["titulo"]; ?>">
                         </td>
                     </tr>
                     <tr> 
@@ -76,7 +76,17 @@
                         </label>
                         </td>
                         <td>
-                            <input type="text" name="subtitulo" id="subtitulo" value="<?php echo $result["subtitulo"]; ?>">
+                            <input type="text" name="subtitulo0" id="subtitulo" value="<?php echo $result["subtitulo"]; ?>">
+                        </td>
+                        </tr>
+                        <tr> 
+                        <td>
+                        <label for="autor">
+                            Autor
+                        </label>
+                        </td>
+                        <td>
+                            <input type="text" name="autor0" id="autor" value="<?php echo $result["autor"]; ?>">
                         </td>
                         </tr>
                         <td>
@@ -85,12 +95,11 @@
                                 </label>
                             </td>
                     <td>
-                    <textarea id="texto">
+                    <textarea id="texto" name="texto0">
                     <?php echo $result["texto"]; ?>"
                     </textarea>
                     </td>
                     </tr> 
-                    
                 </table>
                 <input type="submit" value="Salvar">
                 </form>

@@ -30,15 +30,14 @@
 
 <div class="w3-content w3-padding" style="max-width:1564px" align="center">
     <div class="w3-container w3-padding-32" id="projects">
-
+    
     <?php 
     include_once("conexao.php");
     $sql    = "SELECT * from roteiro";
     $res    = mysqli_query($conn, $sql);
     $result = mysqli_fetch_assoc($res);
-    
 ?>
-<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><?php  echo $result["titulo"] ; ?></h3>
+<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><?php echo $result["titulo"] ; ?></h3>
         <p>SHREK</p>
 <p>Escrito por</p>
 <p><?php  echo $result["autor"] ; ?></p>
