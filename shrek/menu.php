@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
-
 <body>
 
 <div class="w3-top">
@@ -34,17 +33,16 @@
 
     <?php 
     include_once("conexao.php");
-    $sql    = "SELECT * from roteiro WHERE titulo = 'Roteiro do 1º Filme de Shrek'";
+    $sql    = "SELECT * from roteiro";
     $res    = mysqli_query($conn, $sql);
     $result = mysqli_fetch_assoc($res);
-    echo "<pre>";
-    print_r($result);
+    
 ?>
-<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><?php //  echo $result["titulo"] ; ?></h3>
+<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><?php  echo $result["titulo"] ; ?></h3>
         <p>SHREK</p>
 <p>Escrito por</p>
-<p><?php  // echo $result["autor"] ; ?></p>
-<p class="texto" style="text-align: justify;"><?php //echo $result["texto"] ; ?></p>
+<p><?php  echo $result["autor"] ; ?></p>
+<p class="texto" style="text-align: justify;"><?php echo $result["texto"] ; ?></p>
 <p>O FIM</p>
 </div>
 

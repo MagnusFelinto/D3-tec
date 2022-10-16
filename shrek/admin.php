@@ -49,10 +49,9 @@
             <div class="caixa">
                 <form action="" method="">
                 <?php include_once("conexao.php");
-        $sql    = "SELECT * from roteiro WHERE titulo = 'Roteiro do 1º Filme de Shrek'";
+        $sql    = "SELECT * from roteiro";
         $res    = mysqli_query($conn, $sql);
         $result = mysqli_fetch_assoc($res);
-
     ?>
                 <table>
                     <tr> 
