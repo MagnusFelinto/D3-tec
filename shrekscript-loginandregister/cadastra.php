@@ -9,7 +9,7 @@
     $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
 
     $email = $_POST['email'];
-    $password = md5($_POST['senha']);
+    $password = $_POST['senha'];
 
     $limita = "SELECT * FROM usuarios WHERE email = '$email'";
 
