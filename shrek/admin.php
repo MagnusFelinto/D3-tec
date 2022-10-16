@@ -47,13 +47,12 @@
         </nav>
         <div align="center">
             <div class="caixa">
-                <form action="" method="">
+                <form action="update.php" method="POST">
                 <?php include_once("conexao.php");
-        $sql    = "SELECT * from roteiro WHERE titulo = 'Roteiro do 1º Filme de Shrek'";
-        $res    = mysqli_query($conn, $sql);
-        $result = mysqli_fetch_assoc($res);
-
-    ?>
+                    $sql    = "SELECT * from roteiro";
+                    $res    = mysqli_query($conn, $sql);
+                    $result = mysqli_fetch_assoc($res);
+                ?>
                 <table>
                     <tr> 
                         <th>
@@ -86,12 +85,11 @@
                                 </label>
                             </td>
                     <td>
-                    <textarea id="texto">
+                    <textarea id="texto" name="texto">
                     <?php echo $result["texto"]; ?>"
                     </textarea>
                     </td>
                     </tr> 
-                    
                 </table>
                 <input type="submit" value="Salvar">
                 </form>
